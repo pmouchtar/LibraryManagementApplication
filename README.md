@@ -21,11 +21,11 @@ Postman (for API testing)
 
 # ⚙️ Setup & Installation
 ## 1️⃣ Clone the Repository
-git clone https://github.com/your-username/library-management.git
+git clone https://github.com/pmouchtar/LibraryManagementApplication.git
 cd library-management
 ## 2️⃣ Configure the Database
 ##Edit the src/main/resources/application.properties file and set up your MySQL database:
-spring.datasource.url=jdbc:mysql://localhost:3306/library_db
+spring.datasource.url=jdbc:mysql://localhost:3306/library_management
 spring.datasource.username=root
 spring.datasource.password=yourpassword
 spring.jpa.hibernate.ddl-auto=update
@@ -48,3 +48,21 @@ PUT   	/api/books/{id}	        Update book details
 DELETE	/api/books/{id}	        Delete a book
 POST  	/api/books/rent/{id}	  Rent a book
 POST	  /api/books/return/{id}	Return a book
+
+## Example tests in Postman
+### Add a Book:
+Method: POST
+URL: http://localhost:8080/api/books/
+Body (JSON):
+json
+Αντιγραφή
+Επεξεργασία
+{
+  "title": "Spring Boot in Action",
+  "author": "Craig Walls",
+  "description": "Comprehensive guide to Spring Boot",
+  "isRented": false
+}
+### Get All Books:
+Method: GET
+URL: http://localhost:8080/api/books/
