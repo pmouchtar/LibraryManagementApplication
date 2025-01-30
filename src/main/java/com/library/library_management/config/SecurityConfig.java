@@ -1,4 +1,4 @@
-/*package com.library.library_management.config;
+package com.library.library_management.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -30,6 +30,6 @@ public class SecurityConfig {
     }
 }
 
- */
+
 
 

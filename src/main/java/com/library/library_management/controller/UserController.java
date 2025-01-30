@@ -13,10 +13,16 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("/register")
+    public User registerUser(@RequestBody User user) {
+        return userService.createUser(user.getUsername(), user.getPassword());
+    }
+
+    /*
+    @PostMapping("/register")
     public User registerUser(@RequestParam String username, @RequestParam String password) {
         return userService.createUser(username, password);
     }
-
+*/
     @GetMapping("/{username}")
     public User getUser(@PathVariable String username) {
         return userService.getUserByUsername(username);
