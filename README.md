@@ -55,8 +55,7 @@ Method: POST
 URL: http://localhost:8080/api/books/
 Body (JSON):
 json
-Αντιγραφή
-Επεξεργασία
+
 {
   "title": "Spring Boot in Action",
   "author": "Craig Walls",
